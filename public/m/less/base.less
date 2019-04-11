@@ -1,0 +1,151 @@
+// 项目里面的页面很多重复样式 需要封装在公共文件里面
+// 1. 定义一些公共变量
+@main-color: #006699;
+
+// 2. 样式初始化 （不需要写那么多有MUI已经写了一些稍微加一点点）
+html {
+    font-size: 26.66667vw;
+}
+
+
+
+// 去掉标题默认间距
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+// 去除图片和块级元素3px间隙
+img {
+    vertical-align: middle;
+}
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-size: .14rem;
+    line-height: .14rem;
+}
+
+.dfcc(){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dfrc(){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bt(){
+    border: 1px solid #ccc;
+}
+.bb(){
+    border: 1px solid #ccc;
+}
+.br(){
+    border: 1px solid #ccc;
+}
+.bl(){
+    border: 1px solid #ccc;
+}
+#header{
+    background-color: @main-color;
+    display: flex;
+    height: .45rem;
+    .left{
+       width: .45rem;
+       height: .45rem;
+       a {
+        color: #fff;
+        height: .45rem;
+        .dfcc();
+    }
+       
+    }
+    .center{
+        flex: 1;
+        h4{
+            color: #fff;
+            font-weight: normal;
+            // 调用封装的一个函数
+            .dfcc();
+            height: 100%;
+        }
+        form{
+            padding-top: .05rem;
+            input{
+                background-color: #fff;
+                height: 35px;
+                text-align: left;
+                font-size: .14rem;
+                margin-bottom: 0;
+            }
+        }
+
+    }
+    .right{
+        width: .45rem;
+        height: .45rem;
+        .dfcc();
+        i{
+            color: #fff;
+        }
+    }
+}
+#main {
+    flex: 1;
+   overflow: hidden;
+   position: relative;
+   form.search-form {
+    display: flex;
+    padding: 10px;
+    height: 0.44rem;
+
+    input {
+      flex: 1;
+      height: 0.34rem;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      border: 1px solid @main-color;
+      margin-bottom: 0;
+    }
+    .blueBtn {
+      width: 0.6rem;
+      height: 0.34rem;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      color: white;
+      background-color: @main-color;
+    }
+  }
+}
+#footer {
+    background-color: @main-color;
+    height: .45rem;
+
+    .mui-row {
+        >div {
+            a {
+                height: .45rem;
+                color: #fff;
+                // 调用公共函数实现内容水平垂直居中
+                .dfrc();
+
+                i {
+                    display: block;
+                }
+
+                span {
+                    display: block;
+                }
+            }
+        }
+    }
+}

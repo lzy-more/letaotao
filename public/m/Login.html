@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+     <!-- 1. 引入MUI的CSS文件 使用这个没有压缩 mui.css带了rem单位 -->
+     <link rel="stylesheet" href="./lib/mui/css/mui.css" />
+     <!-- 2. 引入fontawesome字体图标库的css文件 提供页面中字体图标-->
+     <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css" />
+     <!-- 4. 如果想使用swiper轮播图 因为swiper的css-->
+     <link rel="stylesheet" href="./lib/swiper/css/swiper.css" />
+     <!-- 3. 引入自己的css文件 -->
+     <link rel="stylesheet" href="./less/Login.css" />
+</head>
+<body>
+    <header id="header">
+      <div class="left">
+        <a href="#" class="fa fa-arrow-left"></a>
+      </div>
+      <div class="center">
+       <h4>登录中心</h4>
+      </div>
+      <div class="right">
+        <!-- <i class="fa fa-search"></i> -->
+        <a href="#">
+                <i class="fa fa-home"></i>
+              
+              </a>
+      </div>
+    </header>
+  <main id="main">
+        <form class="mui-input-group">
+                <div class="mui-input-row">
+                    <label>用户名</label>
+                <input type="text" class="mui-input-clear" placeholder="请输入用户名">
+                </div>
+                <div class="mui-input-row">
+                    <label>密码</label>
+                    <input type="password" class="mui-input-password" placeholder="请输入密码">
+                </div>
+                <div class="mui-button-row">
+                    <button type="button" class="mui-btn mui-btn-primary" >登录</button>
+                    <button type="button" class="mui-btn mui-btn-danger btn-register" >立即注册</button>
+                </div>
+            </form>
+  </main>
+    <footer id="footer">
+      <!-- mui的栅格和bootstrap一样也是行和列组成 一行最多12列 只有2中屏幕 xs  和 sm  行不需要放容器
+                    列 必须放行里面 -->
+      <div class="mui-row">
+        <div class="mui-col-xs-3">
+          <a href="index.html">
+            <i class="fa fa-home"></i>
+            <span>首页</span>
+          </a>
+        </div>
+        <div class="mui-col-xs-3">
+          <a href="category.html">
+            <i class="fa fa-home"></i>
+            <span>分类</span>
+          </a>
+        </div>
+        <div class="mui-col-xs-3">
+          <a href="#">
+            <i class="fa fa-home"></i>
+            <span>首页</span>
+          </a>
+        </div>
+        <div class="mui-col-xs-3">
+          <a href="#">
+            <i class="fa fa-home"></i>
+            <span>首页</span>
+          </a>
+        </div>
+      </div>
+    </footer>
+ <script id="tpl" type="text/html">
+    {{each list value index}}
+    <li class="mui-table-view-cell">
+      <a href="./products.html?search={{value}}"></a>
+      {{value}}
+    
+        <span class="mui-badge fa fa-close delete-btn" data-index="{{index}}"></span>
+    </li>
+   
+    {{/each}}
+</script>
+    <!--  1. 引入MUI的js文件 -->
+    <script src="./lib/mui/js/mui.min.js"></script>
+    <!-- 2. 引入zepto 获取元素 发送请求 和jq一样的功能适用移动端-->
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <!-- 3. 有请求使用到模板 引入模板引擎 template-web.js-->
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <!-- 4. 引入swiper的js -->
+    <script src="./lib/swiper/js/swiper.js"></script>
+    <!-- 5. 引入自己的js -->
+    <script src="./js/Login.js"></script>
+  </body>
+</html>

@@ -1,0 +1,77 @@
+@import "./base.less";
+#main {
+  display: flex;
+  flex-direction: column;
+  .mui-table-view {
+    flex: 1;
+    .mui-media {
+        &::after{
+            left: 0;
+        }
+
+      a {
+        display: flex;
+     
+        img {
+          max-width: 0.8rem;
+          height: 0.8rem;
+        }
+        .mui-checkbox {
+            text-align: center;
+            margin-top: .1rem;
+            // display: inline;
+            // 左边的复选框
+            input[type='checkbox'] {
+                position: static;
+
+                &::before {
+                    // 这是一个图片使用字体大小修改图标大小
+                    font-size: .24rem;
+                    left: 0;
+                }
+            }
+        }
+
+        .mui-media-body {
+          margin-top: 0.05rem;
+          .mui-ellipsis {
+            white-space: normal;
+            line-height: 0.2rem;
+            font-size: 0.16rem;
+            &.mui-price {
+              line-height: .3rem;
+             
+                span {
+                color: red;
+                margin-right: .3rem;
+              }
+            }
+          }
+        }
+        .flex {
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+ 
+}
+#cardOrder{
+  .mui-card{
+    margin: .1rem 0 0 0;
+    .mui-card-header{
+      height: .34rem;
+    line-height: .34rem;
+   
+    // padding: 0;
+    P{
+      margin-top: .1rem;
+      color:red;
+      font-size: .16rem;
+      font-weight: bold;
+    }
+    }
+  }
+  }
+

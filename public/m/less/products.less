@@ -1,0 +1,29 @@
+@import "./base.less";
+#main {
+    a{
+     
+        &.active{
+            color: red;
+        }
+    }
+  .firstRow{
+    > div {
+      padding: 5px;
+      .product {
+        text-align: center;
+        border: 1px solid #ccc;
+        img {
+          width: 100%;
+        }
+        p {
+          line-height: 0.2rem;
+          height: .4rem;
+          overflow: hidden;
+          del {
+            color: red;
+          }
+        }
+      }
+    }
+  }
+}
